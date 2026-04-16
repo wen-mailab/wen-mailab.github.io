@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 40% 98%;
+    --foreground: 224 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 20% 15%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 220 20% 94%;
+    --secondary-foreground: 224 20% 15%;
+
+    --muted: 220 20% 94%;
+    --muted-foreground: 220 10% 45%;
+
+    --accent: 217 91% 70%;
+    --accent-foreground: 224 20% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 20% 90%;
+    --input: 220 20% 90%;
+    --ring: 217 91% 70%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --hero-particle-opacity: 0.4;
+    --card-shadow: 0 0 0 1px hsl(var(--border)), 0 2px 4px -1px hsl(var(--foreground) / 0.04), 0 4px 8px -2px hsl(var(--foreground) / 0.03);
+    --card-shadow-hover: 0 0 0 1px hsl(var(--border)), 0 4px 8px -2px hsl(var(--foreground) / 0.06), 0 8px 16px -4px hsl(var(--foreground) / 0.05);
+
+    /* Earth surface */
+    --earth-surface: 140 30% 35%;
+    --earth-text: 140 10% 90%;
+  }
+
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 96%;
+
+    --card: 222 47% 14%;
+    --card-foreground: 210 40% 96%;
+
+    --popover: 222 47% 14%;
+    --popover-foreground: 210 40% 96%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 222 47% 18%;
+    --secondary-foreground: 210 40% 96%;
+
+    --muted: 222 47% 18%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 217 91% 70%;
+    --accent-foreground: 210 40% 96%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 22%;
+    --input: 217 33% 22%;
+    --ring: 217 91% 70%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --hero-particle-opacity: 0.2;
+    --card-shadow: 0 0 0 1px hsl(var(--border)), 0 2px 4px -1px hsl(var(--foreground) / 0.06), 0 4px 8px -2px hsl(var(--foreground) / 0.04);
+    --card-shadow-hover: 0 0 0 1px hsl(var(--border)), 0 4px 8px -2px hsl(var(--foreground) / 0.08), 0 8px 16px -4px hsl(var(--foreground) / 0.06);
+
+    /* Earth surface */
+    --earth-surface: 150 25% 12%;
+    --earth-text: 150 10% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+/* Smooth atmosphere gradient — dark space at top, lighter blue at bottom */
+.atmosphere-gradient {
+  background: linear-gradient(
+    180deg,
+    hsl(205, 50%, 55%) 0%,
+    hsl(210, 42%, 50%) 12%,
+    hsl(212, 38%, 42%) 22%,
+    hsl(215, 34%, 35%) 34%,
+    hsl(218, 36%, 28%) 46%,
+    hsl(220, 40%, 22%) 58%,
+    hsl(222, 44%, 16%) 70%,
+    hsl(225, 46%, 11%) 82%,
+    hsl(228, 48%, 7%) 92%,
+    hsl(230, 50%, 4%) 100%
+  );
+}
+
+.dark .atmosphere-gradient {
+  background: linear-gradient(
+    180deg,
+    hsl(210, 32%, 28%) 0%,
+    hsl(212, 34%, 25%) 12%,
+    hsl(214, 36%, 22%) 22%,
+    hsl(216, 38%, 19%) 34%,
+    hsl(218, 40%, 16%) 46%,
+    hsl(220, 42%, 13%) 58%,
+    hsl(222, 44%, 10%) 70%,
+    hsl(225, 46%, 7%) 82%,
+    hsl(228, 48%, 5%) 92%,
+    hsl(230, 50%, 3%) 100%
+  );
+}
+
