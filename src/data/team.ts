@@ -10,28 +10,28 @@ export interface TeamMember {
   about: string;
   headshot?: string;
   awards?: string[];
-  /** Paper IDs from papers.ts — publications are auto-linked */
+  // Paper IDs from papers.ts
   paperIds?: string[];
-  /** Conference presentation IDs from conferences.ts — presentations are auto-linked */
+  // Conference presentation IDs from conferences.ts
   conferenceIds?: string[];
 }
 
 export const team: TeamMember[] = [
   {
     id: "yixinwen",
-    name: "Dr. Yixin \"Berry\" Wen",
+    name: "Yixin \"Berry\" Wen, Ph.D.",
     status: "Principal Investigator",
     email: "yixin.wen@ufl.edu",
     about:
       "My motivation to pursue more accurate remote sensing precipitation retrievals at global scale is powered by the massive precipitation observations and the advanced machine learning (ML) technologies. During my 10-year work on the advanced weather radar at NOAA and on various satellite missions (e.g. AIRS, GPM, MODIS) at NASA, I have been involved in development and evaluation of weather radar and satellite precipitation retrieval algorithms.",
     headshot: "/mai-lab/assets/headshots/yixin_wen.jpg",
-    awards: [
-      "NSF 25-530 Collaborative Research: CAIG: Reliable Uncertainty-Aware Generative Downscaling for Geoscience Data (PI, $353,178, 10/1/2025 – 9/30/2028)",
-      "NASA NNH23ZDA001N-EEJ: A.47 Earth Action: Community Action for Equity and Environmental Justice, Building Co-Design and Co-Learning Digital Twins against Floods on Tribal Lands in support of Indigenous Communities (Co-I, $750,374, 10/01/2024-9/31/2027, with University of Oklahoma)",
-      "NASA Jet Propulsion Laboratory, California Institute of Technology A19-0075-001, Analysis of the performance of the Atmospheric Infrared Sounder (AIRS) retrieval system (PI, $140,000, 08/01/2018-09/31/2021)",
-      "University of Oklahoma Cooperative Institute for Mesoscale Meteorological Studies (CIMMS) Director’s Directed Research Fund, Understanding satellite-derived cloud properties using polarimetric classification of hydrometeor types from WSR-88D radars. (PI, $20,000)",
-      "NASA Oklahoma EPSCoR Research Initiation Grant, Development of a joint ground polarimetric radar and satellite database. (PI, $27,000, 06/01/2019-06/01/2021)"
-    ],
+    // awards: [
+    //   "NSF 25-530 Collaborative Research: CAIG: Reliable Uncertainty-Aware Generative Downscaling for Geoscience Data (PI, $353,178, 10/1/2025 – 9/30/2028)",
+    //   "NASA NNH23ZDA001N-EEJ: A.47 Earth Action: Community Action for Equity and Environmental Justice, Building Co-Design and Co-Learning Digital Twins against Floods on Tribal Lands in support of Indigenous Communities (Co-I, $750,374, 10/01/2024-9/31/2027, with University of Oklahoma)",
+    //   "NASA Jet Propulsion Laboratory, California Institute of Technology A19-0075-001, Analysis of the performance of the Atmospheric Infrared Sounder (AIRS) retrieval system (PI, $140,000, 08/01/2018-09/31/2021)",
+    //   "University of Oklahoma Cooperative Institute for Mesoscale Meteorological Studies (CIMMS) Director’s Directed Research Fund, Understanding satellite-derived cloud properties using polarimetric classification of hydrometeor types from WSR-88D radars. (PI, $20,000)",
+    //   "NASA Oklahoma EPSCoR Research Initiation Grant, Development of a joint ground polarimetric radar and satellite database. (PI, $27,000, 06/01/2019-06/01/2021)"
+    // ],
     // paperIds: ["p1", "p2", "p3", "p4"],
     // conferenceIds: ["c1", "c2"],
   },
@@ -79,6 +79,14 @@ export const team: TeamMember[] = [
     // conferenceIds: [],
   },
   {
+    id: "yutingdai",
+    name: "Yuting Dai",
+    status: "M.S. Student",
+    about:
+      "My work is focused on increasing accessibility of high-resolution weather models. I am currently applying remote sensing data to analyze effects of severe weather events on local agriculture. ",
+    headshot: "/mai-lab/assets/headshots/yuting_dai.jpg",
+  },
+  {
     id: "tandao",
     name: "Tan Dao",
     status: "Collaborator",
@@ -118,6 +126,16 @@ export const team: TeamMember[] = [
     awards: ["Regeneron STS Scholar 2024"],
     paperIds: [],
     conferenceIds: [],
+  },
+  {
+    id: "jacobhines",
+    name: "Jacob Hines",
+    status: "Undergraduate",
+    about:
+      "I am an undergraduate student pursuing a degree in General Atmospheric Sciences and a minor in Physics at the University of Florida. I am currently conducting research on increasing the resolution of satellite precipitation data using wavelet diffusion.",
+    headshot: "/mai-lab/assets/headshots/jacob_hines.jpg",
+    // paperIds: ["p9", "p10"],
+    // conferenceIds: ["c9", "c10"],
   },
   // {
   //   id: "",

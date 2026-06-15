@@ -1,10 +1,9 @@
-import { useState } from "react";
+import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { conferencesPresentations } from "@/data/conferences";
 
-export const Conferences = () => {
-  const [showAll, setShowAll] = useState(false);
-  const displayedConferences = showAll ? conferencesPresentations : conferencesPresentations.slice(0, 5);
+export const Conferences = ({ preview = false }: { preview?: boolean }) => {
+  const displayedConferences = preview ? conferencesPresentations.slice(0, 5) : conferencesPresentations;
 
   return (
     <section id="presentations" className="py-24 md:py-32">
@@ -35,14 +34,14 @@ export const Conferences = () => {
           ))}
         </div>
 
-        {!showAll && conferencesPresentations.length > 5 && (
+        {preview && conferencesPresentations.length > 5 && (
           <div className="flex justify-center mt-8">
-            <button
-              onClick={() => setShowAll(true)}
+            <Link
+              to="/presentations"
               className="px-6 py-2 rounded-full bg-white/15 text-white font-medium text-sm hover:bg-white/25 transition-colors backdrop-blur-sm"
             >
               View more ({conferencesPresentations.length - 5} more)
-            </button>
+            </Link>
           </div>
         )}
       </div>

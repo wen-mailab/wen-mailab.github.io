@@ -1,14 +1,13 @@
-import { useState } from "react";
+import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { papers } from "@/data/papers";
 
-export const Papers = () => {
-  const [showAll, setShowAll] = useState(false);
-  const displayedPapers = showAll ? papers : papers.slice(0, 5);
+export const Papers = ({ preview = false }: { preview?: boolean }) => {
+  const displayedPapers = preview ? papers.slice(0, 5) : papers;
 
   return (
     <section id="publications" className="py-24 md:py-32">
-    <div className="max-w-5xl mx-auto px-4">
+      <div className="max-w-5xl mx-auto px-4">
       <h2
         className="font-medium tracking-[-0.02em] leading-[1.1] text-white mb-12"
         style={{ fontSize: "clamp(1.5rem, 4vw, 2.25rem)" }}
@@ -38,14 +37,14 @@ export const Papers = () => {
         ))}
       </div>
 
-      {!showAll && papers.length > 5 && (
+      {preview && papers.length > 5 && (
         <div className="flex justify-center mt-8">
-          <button
-            onClick={() => setShowAll(true)}
+          <Link
+            to="/publications"
             className="px-6 py-2 rounded-full bg-white/15 text-white font-medium text-sm hover:bg-white/25 transition-colors backdrop-blur-sm"
           >
             View more ({papers.length - 5} more)
-          </button>
+          </Link>
         </div>
       )}
     </div>
