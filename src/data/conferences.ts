@@ -6,6 +6,7 @@ export interface ConferencePresentation {
   location: string;
   year: number;
   doi?: string;
+  abstractId?: string;
 }
 
 // Restored from the public MAILab website snapshot on 2026-10-02.
@@ -52,7 +53,7 @@ export const conferencesPresentations: ConferencePresentation[] = [
     "conferenceName": "EGU - Copernicus Meetings",
     "location": "Vienna, Austria",
     "year": 2024,
-    "doi": "EGU24-12984"
+    "doi": "10.5194/egusphere-egu24-12984"
   },
   {
     "id": "c5",
@@ -110,7 +111,7 @@ export const conferencesPresentations: ConferencePresentation[] = [
     "conferenceName": "AGU Fall Meeting",
     "location": "New Orleans, Louisiana",
     "year": 2021,
-    "doi": "H25R-1229"
+    "abstractId": "H25R-1229"
   },
   {
     "id": "c9",

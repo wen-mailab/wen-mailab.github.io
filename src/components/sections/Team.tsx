@@ -28,7 +28,11 @@ function MemberCard({ member }: { member: TeamMember }) {
         {member.headshot && (
           <img
             src={member.headshot}
-            alt={member.name}
+            alt=""
+            width={80}
+            height={80}
+            loading="lazy"
+            decoding="async"
             className="h-20 w-20 rounded-full object-cover ring-2 ring-slate-200"
           />
         )}
@@ -152,18 +156,18 @@ export const Team = () => {
   return (
     <section id="team" className="py-24 md:py-32">
       <div className="max-w-5xl mx-auto px-4">
-        <h2
+        <h1
           className="font-medium tracking-[-0.02em] leading-[1.1] text-slate-900 mb-16"
           style={{ fontSize: "clamp(1.5rem, 4vw, 2.25rem)" }}
         >
           Team
-        </h2>
+        </h1>
 
         {groups.map((group) => (
           <div key={group.label} className="mb-16 last:mb-0">
-            <h3 className="text-sm font-medium text-slate-600 uppercase tracking-widest mb-6">
+            <h2 className="text-sm font-medium text-slate-600 uppercase tracking-widest mb-6">
               {group.label}
-            </h3>
+            </h2>
             <div
               className="grid grid-cols-1 gap-6"
             >

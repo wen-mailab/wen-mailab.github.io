@@ -4,11 +4,17 @@ export interface Paper {
   authors: string[];
   journal: string;
   pages?: string;
+  volume?: string;
+  issue?: string;
+  articleNumber?: string;
+  status?: "preprint" | "accepted" | "book-chapter" | "editorial";
   year: number;
   doi: string;
 }
 
-// Restored from the public MAILab website snapshot on 2026-10-02.
+// Original records restored from the public MAILab snapshot on 2026-10-02.
+// Verified additions/citation corrections approved on 2026-10-07.
+// Evidence: outputs/website-research/publication-audit-2026-10-07 in the parent workspace.
 export const papers: Paper[] = [
   {
     "id": "p1",
@@ -18,9 +24,10 @@ export const papers: Paper[] = [
       "Wen, Y.",
       "Yang, H."
     ],
-    "journal": "arXiv preprint",
+    "journal": "arXiv",
     "year": 2026,
-    "doi": "10.48550/arXiv.2601.14176"
+    "doi": "10.48550/arXiv.2601.14176",
+    "status": "preprint"
   },
   {
     "id": "p2",
@@ -30,25 +37,21 @@ export const papers: Paper[] = [
       "Chen, M.",
       "Li, Z.",
       "Wen, Y.",
-      "et al."
+      "Zhu, S.",
+      "Zhang, M.",
+      "Liu, D.",
+      "Cao, J.",
+      "Chen, X.",
+      "Deng, C.",
+      "Yang, T.",
+      "Hong, Y."
     ],
     "journal": "Geophysical Research Letters",
     "year": 2026,
-    "doi": "10.13140/RG.2.2.34824.48643"
-  },
-  {
-    "id": "p3",
-    "title": "AQUAH: Automatic Quantification and Unified Agent in Hydrology",
-    "authors": [
-      "Yan, S.",
-      "Chen, M.",
-      "Zhu, S.",
-      "Wen, Y.",
-      "et al."
-    ],
-    "journal": "arXiv preprint",
-    "year": 2026,
-    "doi": "10.48550/arXiv.2508.02936"
+    "doi": "10.1029/2025gl119814",
+    "volume": "53",
+    "issue": "13",
+    "articleNumber": "e2025GL119814"
   },
   {
     "id": "p4",
@@ -56,13 +59,220 @@ export const papers: Paper[] = [
     "authors": [
       "Kisembe, J.",
       "Wen, Y.",
-      "Wainwright, C.",
-      "Odongo, R.",
+      "Wainwright, C.M.",
+      "Funk, C.",
+      "Odongo, R.I.",
       "Qian, W."
     ],
     "journal": "Journal of Hydrometeorology",
     "year": 2026,
-    "doi": "10.1175/JHM-D-25-0080.1"
+    "doi": "10.1175/jhm-d-25-0080.1",
+    "volume": "27",
+    "issue": "3",
+    "pages": "325-342"
+  },
+  {
+    "id": "p57",
+    "title": "Efficient Kilometer‐Scale Precipitation Downscaling With Conditional Wavelet Diffusion",
+    "journal": "Journal of Geophysical Research: Machine Learning and Computation",
+    "year": 2026,
+    "authors": [
+      "Yi, C.",
+      "Yu, M.",
+      "Qian, W.",
+      "Wen, Y.",
+      "Yang, H."
+    ],
+    "doi": "10.1029/2025jh000941",
+    "volume": "3",
+    "issue": "2",
+    "articleNumber": "e2025JH000941"
+  },
+  {
+    "id": "p58",
+    "title": "Assessing Flash Drought Development and Propagation Across the Contiguous United States Using Remote Sensing",
+    "journal": "Earth's Future",
+    "year": 2026,
+    "authors": [
+      "Zeraati, M.",
+      "Farahmand, A.",
+      "Seager, R.",
+      "Fowler, H.J.",
+      "Madani, N.",
+      "Parazoo, N.",
+      "Manning, C.",
+      "White, C.J.",
+      "Wen, Y.",
+      "Mehran, A.",
+      "AghaKouchak, A."
+    ],
+    "doi": "10.1029/2025ef007037",
+    "volume": "14",
+    "issue": "3",
+    "articleNumber": "e2025EF007037"
+  },
+  {
+    "id": "p59",
+    "title": "A Review of the Past Half Century of Geostationary Satellite Thermal Observations for Global Precipitation Estimation: Developments, achievements, and future prospects",
+    "journal": "IEEE Geoscience and Remote Sensing Magazine",
+    "year": 2026,
+    "authors": [
+      "Zhu, S.",
+      "Tang, G.",
+      "Sorooshian, S.",
+      "Huffman, G.J.",
+      "Duan, Q.",
+      "Yan, S.",
+      "Behrangi, A.",
+      "Papalexiou, S.M.",
+      "Nguyen, P.",
+      "Hsu, K.",
+      "Wen, Y.",
+      "Liu, Z.",
+      "Li, Z.",
+      "Chen, M.",
+      "Laviola, S.",
+      "Hong, Y."
+    ],
+    "doi": "10.1109/mgrs.2026.3665828",
+    "volume": "14",
+    "issue": "3",
+    "pages": "369-391"
+  },
+  {
+    "id": "p60",
+    "title": "Advancing Spaceborne Precipitation Radar Monitoring: Systematic Comparison Between PMR and DPR Observations",
+    "journal": "IEEE Transactions on Geoscience and Remote Sensing",
+    "year": 2026,
+    "authors": [
+      "Song, J.",
+      "Yong, B.",
+      "Zhang, H.",
+      "Zhang, F.",
+      "Ahmed, Z.",
+      "Chan, N.W.",
+      "Wang, G.",
+      "Wen, Y."
+    ],
+    "doi": "10.1109/tgrs.2025.3650492",
+    "volume": "64",
+    "pages": "1-18"
+  },
+  {
+    "id": "p61",
+    "title": "Recent oceanic performance of GPM multisatellite precipitation estimates benchmarked by passive aquatic listeners",
+    "journal": "Journal of Hydrology",
+    "year": 2026,
+    "authors": [
+      "Wang, Y.",
+      "Yong, B.",
+      "Qi, W.",
+      "Wen, Y."
+    ],
+    "doi": "10.1016/j.jhydrol.2025.134475",
+    "volume": "664",
+    "articleNumber": "134475"
+  },
+  {
+    "id": "p63",
+    "title": "Tornadoes",
+    "journal": "Data-Driven Earth Observation for Disaster Management",
+    "year": 2026,
+    "authors": [
+      "Wen, Y.",
+      "Qian, W.",
+      "Zhu, S."
+    ],
+    "doi": "10.1016/b978-0-443-33803-8.00011-1",
+    "pages": "157-166",
+    "status": "book-chapter"
+  },
+  {
+    "id": "p65",
+    "title": "Evaluating Cross-region Generalization for Wavelet-Diffusion Precipitation Downscaling",
+    "year": 2026,
+    "doi": "10.48550/arXiv.2609.28749",
+    "journal": "arXiv",
+    "authors": [
+      "Qian, W.",
+      "Wen, Y.",
+      "Yi, C.",
+      "Li, Z.",
+      "Li, L.",
+      "Yang, H."
+    ],
+    "status": "preprint"
+  },
+  {
+    "id": "p66",
+    "title": "Bringing Agentic Search to Earth Observation Data Discovery",
+    "year": 2026,
+    "doi": "10.48550/arXiv.2607.02387",
+    "journal": "CIKM 2026",
+    "authors": [
+      "Yu, M.",
+      "Sun, Y.",
+      "Yi, C.",
+      "Wen, Y.",
+      "Yang, H."
+    ],
+    "status": "accepted"
+  },
+  {
+    "id": "p67",
+    "title": "FloodSimBench: A Benchmark Dataset for Training Foundational Flood Inundation Models",
+    "journal": "ESS Open Archive",
+    "year": 2026,
+    "authors": [
+      "Li, Z.",
+      "Yan, S.",
+      "Zhang, M.",
+      "Zhu, S.",
+      "Wen, Y.",
+      "Sun, A.",
+      "Ma, M.",
+      "Hong, Y."
+    ],
+    "doi": "10.22541/essoar.15002741/v1",
+    "status": "preprint"
+  },
+  {
+    "id": "p68",
+    "title": "The evolution of hydrology (1900-) under changing scientific paradigms: From catchments to Earth-system synthesis",
+    "journal": "ESS Open Archive",
+    "year": 2026,
+    "authors": [
+      "Hong, Y.",
+      "Sorooshian, S.",
+      "Foufoula-Georgiou, E.",
+      "Gorelick, S.M.",
+      "Vörösmarty, C.",
+      "Yan, S.",
+      "Zhu, S.",
+      "Baker, V.R.",
+      "Wen, Y.",
+      "Chen, M."
+    ],
+    "doi": "10.22541/essoar.15009793/v1",
+    "status": "preprint"
+  },
+  {
+    "id": "p3",
+    "title": "AQUAH: Automatic Quantification and Unified Agent in Hydrology",
+    "authors": [
+      "Yan, S.",
+      "Li, Z.",
+      "Zhu, S.",
+      "Wen, Y.",
+      "Zhang, M.",
+      "Chen, M.",
+      "Cao, J.",
+      "Hong, Y."
+    ],
+    "journal": "2025 IEEE/CVF International Conference on Computer Vision Workshops (ICCVW)",
+    "year": 2025,
+    "doi": "10.1109/iccvw69036.2025.00308",
+    "pages": "2947-2956"
   },
   {
     "id": "p5",
@@ -82,7 +292,7 @@ export const papers: Paper[] = [
     "authors": [
       "Camporeale, E.",
       "Marino, R.",
-      "Rundle, J.B.",
+      "Rundle, J.",
       "Folini, D.",
       "Chen, Y.",
       "Lucas, D.D.",
@@ -91,12 +301,15 @@ export const papers: Paper[] = [
       "Fox, G.C.",
       "Wen, Y.",
       "Shen, C.",
-      "Wentzcovitch, R.M.",
-      "Fox, G.C."
+      "Wentzcovitch, R."
     ],
     "journal": "Journal of Geophysical Research: Machine Learning and Computation",
     "year": 2025,
-    "doi": "10.1029/2024JH000369"
+    "doi": "10.1029/2025jh000797",
+    "volume": "2",
+    "issue": "2",
+    "articleNumber": "e2025JH000797",
+    "status": "editorial"
   },
   {
     "id": "p7",
@@ -177,6 +390,22 @@ export const papers: Paper[] = [
     "journal": "Environmental Research Letters",
     "year": 2025,
     "doi": "10.1088/1748-9326/AD984E"
+  },
+  {
+    "id": "p62",
+    "title": "NS-QPE: A Neuro-Symbolic Approach Towards Accurate and Interpretable Quantitative Precipitation Estimation Using Polarimetric Radar Data",
+    "journal": "2025 International Conference on Advanced Machine Learning and Data Science (AMLDS)",
+    "year": 2025,
+    "authors": [
+      "Cham, M.",
+      "Zhang, O.",
+      "Jing, H.",
+      "Qian, W.",
+      "Wen, Y.",
+      "Wang, J."
+    ],
+    "doi": "10.1109/amlds63918.2025.11159351",
+    "pages": "784-792"
   },
   {
     "id": "p12",
@@ -407,6 +636,27 @@ export const papers: Paper[] = [
     "journal": "Geophysical Research Letters",
     "year": 2023,
     "doi": "10.1029/2023GL104992"
+  },
+  {
+    "id": "p69",
+    "title": "Distributed Flashiness-Intensity-Duration-Frequency products over the conterminous US",
+    "journal": "ESS Open Archive",
+    "year": 2023,
+    "authors": [
+      "Li, Z.",
+      "Gao, S.",
+      "Chen, M.",
+      "Zhang, J.",
+      "Gourley, J.J.",
+      "Vergara, H.",
+      "Zhu, S.",
+      "Ferraro, S.C.",
+      "Wen, Y.",
+      "Yang, T.",
+      "Hong, Y."
+    ],
+    "doi": "10.22541/essoar.169272223.38642667/v1",
+    "status": "preprint"
   },
   {
     "id": "p24",
@@ -838,6 +1088,22 @@ export const papers: Paper[] = [
     "pages": "761-775",
     "year": 2016,
     "doi": "10.1175/JHM-D-15-0062.1"
+  },
+  {
+    "id": "p64",
+    "title": "From Tropical to Global Precipitation Measurement",
+    "journal": "Hydrologic Remote Sensing",
+    "year": 2016,
+    "authors": [
+      "Tang, G.",
+      "Wen, Y.",
+      "Zheng, Y.",
+      "Long, D.",
+      "Hong, Y."
+    ],
+    "doi": "10.1201/9781315370392-2",
+    "pages": "1-15",
+    "status": "book-chapter"
   },
   {
     "id": "p49",

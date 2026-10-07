@@ -39,38 +39,3 @@ using the menu button. Section code loads when its page is opened.
 
 Links use hash routes (for example, `/#/publications`) so direct links and browser
 refreshes work on GitHub Pages without server rewrite rules.
-
-## Content snapshot
-
-The team, research, news, awards, publication, and presentation datasets were
-restored from the public `https://wen-mailab.github.io/` snapshot on 2026-10-02.
-Berry's Team email was updated to `yixin.wen@stonybrook.edu` on 2026-10-06.
-The snapshot contains 11 members, 3 research areas, 2 news items, 6 awards/grants,
-56 publication records, and 35 presentation records. The live snapshot does not
-include individual member publication/presentation associations. The three
-existing local Teaching courses are retained as placeholders for UF teaching
-history, not confirmed current SBU offerings. They are labeled "Past Courses Taught"
-with "University of Florida" on the Teaching page; course details remain placeholders.
-
-Team photos are stored in `src/assets/headshots/live` and imported by
-`src/data/team.ts`, so Vite packages them for production as well as local previews.
-
-## Rendering
-
-The Prospective Students page uses professor-provided recruitment wording received
-2026-10-06. It covers Ph.D. email materials, current SBU students, Master's RA support,
-and preferred Ph.D./intern qualifications. The contact email was verified against
-https://www.stonybrook.edu/somas/people/faculty/berry-wen.html on that date.
-
-Home uses a static SVG star background with no animation loop or mouse tracking.
-The Home page also restores the original Earth horizon using transparent WebP
-display copies (about 21 KB on phones and 45 KB on desktop). The original
-8.4 MB `public/assets/earth.svg` is preserved but is not loaded by the page. Stars and
-their SVG halos remain static; the Earth graphic is decorative and stays below
-the introduction. Other pages keep their clear reading background.
-All pages and the sidebar use a light palette, with dark text and blue links.
-Home and Research content display immediately. Other content cards use white
-surfaces and light borders without background blur, scaling, or sliding.
-Publications and Conferences show continuous text lists, newest first, with each
-entry's year in its citation and no separate year sections or reveal controls.
-Reduced-motion preferences disable remaining transitions.
