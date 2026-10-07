@@ -65,7 +65,7 @@ https://www.stonybrook.edu/somas/people/faculty/berry-wen.html on that date.
 Home uses a static SVG star background with no animation loop or mouse tracking.
 The Home page also restores the original Earth horizon using transparent WebP
 display copies (about 21 KB on phones and 45 KB on desktop). The original
-8.4 MB `public/earth.svg` is preserved but is not loaded by the page. Stars and
+8.4 MB `public/assets/earth.svg` is preserved but is not loaded by the page. Stars and
 their SVG halos remain static; the Earth graphic is decorative and stays below
 the introduction. Other pages keep their clear reading background.
 All pages and the sidebar use a light palette, with dark text and blue links.
