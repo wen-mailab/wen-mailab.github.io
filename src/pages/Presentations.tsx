@@ -10,7 +10,7 @@ const PresentationsPage = () => (
     <div className="atmosphere-gradient relative">
       <Starfield />
       <main className="relative z-10">
-        <Conferences preview={false} />
+        <Conferences />
         <AtmosphereDivider label="Thermosphere" altitude="440 miles" />
       </main>
       <EarthFooter />

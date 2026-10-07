@@ -5,26 +5,24 @@ export interface ResearchArea {
   icon: string; // lucide icon name hint
 }
 
+// Restored from the public MAILab website snapshot on 2026-10-02.
 export const researchAreas: ResearchArea[] = [
   {
-    id: "remote-sensing",
-    title: "Remote Sensing in Meteorology and Hydrology",
-    description:
-      "Radar and satellite remote sensing, retrieval, validation and application in Meteorology and Hydrology.",
-    icon: "satellite",
+    "id": "remote-sensing",
+    "title": "Remote Sensing in Meteorology and Hydrology",
+    "description": "Radar and satellite remote sensing, retrieval, validation and application in Meteorology and Hydrology.",
+    "icon": "satellite"
   },
   {
-    id: "radar-satellite",
-    title: "Machine Learning and Deep Learning",
-    description:
-      "Applying machine learning and deep learning techniques for large-scale remote sensing applications.",
-    icon: "radar",
+    "id": "radar-satellite",
+    "title": "Machine Learning and Deep Learning",
+    "description": "Applying machine learning and deep learning techniques for large-scale remote sensing applications.",
+    "icon": "radar"
   },
   {
-    id: "validation",
-    title: "Climate Analysis",
-    description:
-      "Long-term climate data analysis, extreme events and natural hazards.",
-    icon: "planet",
-  },
+    "id": "validation",
+    "title": "Climate Analysis",
+    "description": "Long-term climate data analysis, extreme events and natural hazards.",
+    "icon": "planet"
+  }
 ];

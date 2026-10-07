@@ -130,32 +130,54 @@
 .atmosphere-gradient {
   background: linear-gradient(
     180deg,
-    hsl(205, 50%, 55%) 0%,
-    hsl(210, 42%, 50%) 12%,
-    hsl(212, 38%, 42%) 22%,
-    hsl(215, 34%, 35%) 34%,
-    hsl(218, 36%, 28%) 46%,
-    hsl(220, 40%, 22%) 58%,
-    hsl(222, 44%, 16%) 70%,
-    hsl(225, 46%, 11%) 82%,
-    hsl(228, 48%, 7%) 92%,
-    hsl(230, 50%, 4%) 100%
+    hsl(230, 50%, 4%) 0%,
+    hsl(228, 48%, 7%) 8%,
+    hsl(225, 46%, 11%) 18%,
+    hsl(222, 44%, 16%) 30%,
+    hsl(220, 40%, 22%) 42%,
+    hsl(218, 36%, 28%) 54%,
+    hsl(215, 34%, 35%) 66%,
+    hsl(212, 38%, 42%) 78%,
+    hsl(210, 42%, 50%) 88%,
+    hsl(205, 50%, 55%) 100%
   );
 }
 
 .dark .atmosphere-gradient {
   background: linear-gradient(
     180deg,
-    hsl(210, 32%, 28%) 0%,
-    hsl(212, 34%, 25%) 12%,
-    hsl(214, 36%, 22%) 22%,
-    hsl(216, 38%, 19%) 34%,
-    hsl(218, 40%, 16%) 46%,
-    hsl(220, 42%, 13%) 58%,
-    hsl(222, 44%, 10%) 70%,
-    hsl(225, 46%, 7%) 82%,
-    hsl(228, 48%, 5%) 92%,
-    hsl(230, 50%, 3%) 100%
+    hsl(230, 50%, 3%) 0%,
+    hsl(228, 48%, 5%) 8%,
+    hsl(225, 46%, 7%) 18%,
+    hsl(222, 44%, 10%) 30%,
+    hsl(220, 42%, 13%) 42%,
+    hsl(218, 40%, 16%) 54%,
+    hsl(216, 38%, 19%) 66%,
+    hsl(214, 36%, 22%) 78%,
+    hsl(212, 34%, 25%) 88%,
+    hsl(210, 32%, 28%) 100%
   );
 }
 
+.bibliography a, .reading-page a {
+  color: #1d4ed8;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+
+.bibliography a:hover, .reading-page a:hover { color: #1e3a8a; }
+
+.bibliography a:focus-visible, .reading-page a:focus-visible {
+  outline: 2px solid #1d4ed8;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

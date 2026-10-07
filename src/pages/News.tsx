@@ -10,7 +10,7 @@ const NewsPage = () => (
     <div className="atmosphere-gradient relative">
       <Starfield />
       <main className="relative z-10">
-        <News preview={false} />
+        <News />
         <AtmosphereDivider label="Mesosphere" altitude="50 miles" />
       </main>
       <EarthFooter />
